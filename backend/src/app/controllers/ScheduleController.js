@@ -25,7 +25,7 @@ class ScheduleController {
       return res.status(401).json({
         error: 'User is not a provider'
       });
-    };
+    }
 
     const appointments = await Appointment.findAll({
       where: {
@@ -44,7 +44,7 @@ class ScheduleController {
       }
     });
 
-    return res.json(appointments)
+    return res.json(appointments);
   }
 }
 
